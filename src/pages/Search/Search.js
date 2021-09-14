@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import useSearchPokemon from "src/hooks/useSearchPokemon";
 
@@ -23,8 +24,6 @@ const Search = () => {
   console.log(pokemon);
 
   const { name, image, abilities, moves } = pokemon;
-
-  console.log({ abilities }, { moves });
 
   return (
     <div className="search">
@@ -53,7 +52,11 @@ const Search = () => {
       <div>
         <ul>
           {moves?.map((move, key) => {
-            return <li key={key}>{move.move.name}</li>;
+            return (
+              <li key={key}>
+                <Link to={"/move/" + name}>{move.move.name}</Link>
+              </li>
+            );
           })}
         </ul>
       </div>
