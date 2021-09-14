@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./CardPokemon.css";
 
 const CardPokemon = ({ pokemon, index }) => {
-  console.log(pokemon);
   const { name, sprites, id } = pokemon;
 
   const { front_default } = sprites;
