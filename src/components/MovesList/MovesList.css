@@ -4,16 +4,39 @@
   align-items: center;
   width: 100%;
   border-radius: 0.4rem;
-  border: 0.1rem solid #3b4cca;
+  box-shadow: rgb(0 0 0 / 16%) 0 0.1rem 0.3rem 0;
+  padding: 2rem;
+}
+
+.move-list__see-more {
+  align-self: flex-end;
+  background-color: #f2f2f2;
+  border-radius: 0.4rem;
   padding: 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: black;
+}
+
+.move-list__see-more:hover {
+  background-color: #3b4cca;
+  color: white;
 }
 
 .moves-list__title {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .moves-list__moves {
   list-style: none;
   font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.moves-list__moves li {
+  margin-bottom: 3rem;
 }
