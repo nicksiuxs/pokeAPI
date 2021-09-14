@@ -36,7 +36,7 @@ const PokemonDetail = () => {
 
       <div className="pokemon-detail__about">
         <AbilitiesList abilities={abilities} title={"Abilities"} />
-        <MovesList moves={moves} title={"Moves"} />
+        <MovesList moves={moves} title={"Moves"} name={name} />
       </div>
     </div>
   );
