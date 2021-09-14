@@ -26,6 +26,10 @@
   list-style: none;
 }
 
+.home__pokemons li {
+  margin: auto;
+}
+
 @media (max-width: 768px) {
   .home__logo-container {
     height: 10rem;
