@@ -1,11 +1,62 @@
-import React from "src/pages/Search/Search";
+import React, { useState } from "react";
 
-import SearchBar from "src/components/SearchBar/SearchBar";
+import useSearchPokemon from "src/hooks/useSearchPokemon";
+
+import "./Search.css";
 
 const Search = () => {
+  let namePokemon = "";
+  const [pokemonSearch, setPokemonSearch] = useState("");
+
+  const pokemon = useSearchPokemon(pokemonSearch);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPokemonSearch(namePokemon);
+    console.log("enviando busqueda");
+  };
+
+  const handleOnChange = (e) => {
+    namePokemon = e.target.value.toLowerCase();
+  };
+
+  console.log(pokemon);
+
+  const { name, image, abilities, moves } = pokemon;
+
+  console.log({ abilities }, { moves });
+
   return (
-    <div>
-      <SearchBar />
+    <div className="search">
+      <form onSubmit={handleSubmit}>
+        <input type="text" onChange={handleOnChange} />
+        <input type="submit" value="search" />
+      </form>
+
+      <div>
+        <figure>
+          <img src={image} alt={name} />
+        </figure>
+        <article>
+          <h3>{name}</h3>
+        </article>
+      </div>
+
+      <div>
+        <ul>
+          {abilities?.map((ability, key) => {
+            return <li key={key}>{ability.ability.name}</li>;
+          })}
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          {moves?.map((move, key) => {
+            return <li key={key}>{move.move.name}</li>;
+          })}
+        </ul>
+      </div>
     </div>
   );
 };
