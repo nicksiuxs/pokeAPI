@@ -1,19 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import firstCharge from "src/assets/poke-json.json";
-import AbilitiesList from "src/components/AbilitiesList/AbilitiesList";
 import MovesList from "src/components/MovesList/MovesList";
+import AbilitiesList from "src/components/AbilitiesList/AbilitiesList";
+
+import firstCharge from "src/assets/poke-json.json";
 
 import "./PokemonDetail.css";
 
 const PokemonDetail = () => {
+  // get index from the url
   let { index } = useParams();
+
+  //select pokemon to the index
   const pokemon = firstCharge[index];
 
-  console.log(pokemon);
-
   const { name, sprites, abilities, moves } = pokemon;
+
   const { front_default, back_default, front_shiny } = sprites;
 
   return (
