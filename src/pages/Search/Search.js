@@ -22,8 +22,6 @@ const Search = () => {
     setPokemonName(e.target.value.toLowerCase());
   };
 
-  console.log(error);
-
   return (
     <div className="search">
       <div className="search__text">
