@@ -4,16 +4,30 @@
   align-items: center;
   width: 100%;
   border-radius: 0.4rem;
-  border: 0.1rem solid #3b4cca;
-  padding: 1rem;
+  box-shadow: rgb(0 0 0 / 16%) 0 0.1rem 0.3rem 0;
+  padding: 2rem;
 }
 
 .abilities-list__title {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .abilities-list__abilities {
   list-style: none;
   font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.abilities-list__abilities li {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .abilities-list__abilities {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

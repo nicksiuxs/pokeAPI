@@ -40,3 +40,9 @@
 .moves-list__moves li {
   margin-bottom: 3rem;
 }
+
+@media (max-width: 768px) {
+  .moves-list__moves {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

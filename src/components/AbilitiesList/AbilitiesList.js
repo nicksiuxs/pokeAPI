@@ -1,5 +1,7 @@
 import React from "src/components/AbilitiesList/AbilitiesList";
 
+import MoveItem from "../MoveItem/MoveItem";
+
 import "./AbilitiesList.css";
 
 const AbilitiesList = ({ abilities, title }) => {
@@ -8,7 +10,11 @@ const AbilitiesList = ({ abilities, title }) => {
       <h3 className="abilities-list__title">{title}</h3>
       <ul className="abilities-list__abilities">
         {abilities.map((ability, key) => {
-          return <li key={key}>{ability.ability.name}</li>;
+          return (
+            <li key={key}>
+              <MoveItem text={ability.ability.name} />
+            </li>
+          );
         })}
       </ul>
     </div>
