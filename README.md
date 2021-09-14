@@ -1,7 +1,7 @@
 # PokeAPI
 
 This is the repository to the app poke-api
-Demo: [pokeAPI](wwww.google.com)
+Demo: [pokeAPI](https://vigilant-carson-db83ad.netlify.app/)
 
 ## Library
 
