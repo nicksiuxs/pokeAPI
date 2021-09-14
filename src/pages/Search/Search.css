@@ -23,7 +23,7 @@
 .search__form {
   display: flex;
   width: 100%;
-  max-width: 70%;
+  max-width: 60%;
 }
 
 .search__form-input {
@@ -47,4 +47,11 @@
   color: red;
   margin-top: 2rem;
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .search__form {
+    width: 100%;
+    max-width: 100%;
+  }
 }
