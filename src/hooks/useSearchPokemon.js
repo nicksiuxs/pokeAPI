@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 
 const useSearchPokemon = (name) => {
   const [pokemon, setPokemon] = useState({
+    id: "",
     name: "",
-    image: "",
+    sprites: "",
     abilities: [],
     moves: [],
   });
@@ -19,8 +20,8 @@ const useSearchPokemon = (name) => {
         })
         .then((data) => {
           setError({ status: false, param: "" });
-          const { name, sprites, abilities, moves } = data;
-          setPokemon({ name, image: sprites.front_default, abilities, moves });
+          const { id, name, sprites, abilities, moves } = data;
+          setPokemon({ id: id, name, sprites: sprites, abilities, moves });
         })
         .catch((err) => {
           console.log(err);
