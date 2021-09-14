@@ -18,9 +18,21 @@
 }
 
 .home__pokemons {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
   width: 100%;
   max-width: 60%;
   list-style: none;
+}
+
+@media (max-width: 768px) {
+  .home__logo-container {
+    height: 10rem;
+  }
+
+  .home__pokemons {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
 }
