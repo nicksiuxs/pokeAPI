@@ -1,4 +1,19 @@
 .abilities-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #3b4cca;
+  padding: 1rem;
+}
+
+.abilities-list__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.abilities-list__abilities {
+  list-style: none;
+  font-size: 1.6rem;
 }
