@@ -9,7 +9,7 @@
   font-size: 4rem;
   font-weight: bold;
   text-transform: capitalize;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   color: #3b4cca;
 }
 
@@ -21,5 +21,11 @@
 }
 
 .move-detail__list li {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .move-detail__list {
+    grid-template-columns: repeat(2, auto);
+  }
 }
