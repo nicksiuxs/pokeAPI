@@ -8,6 +8,8 @@ const useSearchPokemon = (name) => {
     moves: [],
   });
 
+  const [error, setError] = useState({ status: false, param: "" });
+
   useEffect(() => {
     if (name !== "") {
       fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -16,14 +18,18 @@ const useSearchPokemon = (name) => {
           return res.json();
         })
         .then((data) => {
+          setError({ status: false, param: "" });
           const { name, sprites, abilities, moves } = data;
           setPokemon({ name, image: sprites.front_default, abilities, moves });
         })
-        .catch((error) => console.log(error));
+        .catch((err) => {
+          console.log(err);
+          setError({ status: true, param: name });
+        });
     }
   }, [name]);
 
-  return pokemon;
+  return { pokemon, error };
 };
 
 export default useSearchPokemon;
