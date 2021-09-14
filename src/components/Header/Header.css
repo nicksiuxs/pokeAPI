@@ -4,9 +4,23 @@
   justify-content: space-between;
   padding: 1rem;
   background-color: #cd3b28;
+  width: 100%;
 }
 
 .header-logo {
   height: 5rem;
   width: auto;
+}
+
+.header-search {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.header-search:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
 }
