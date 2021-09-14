@@ -18,11 +18,7 @@ const Home = () => {
         {firstCharge.map((pokemon, index) => {
           return (
             <li key={pokemon.id}>
-              <CardPokemon
-                name={pokemon.name}
-                photo={pokemon.sprites.front_default}
-                index={index}
-              />
+              <CardPokemon pokemon={pokemon} index={index} />
             </li>
           );
         })}
