@@ -4,19 +4,42 @@ import { Link } from "react-router-dom";
 
 import "./CardPokemon.css";
 
-const CardPokemon = ({ name, photo, index }) => {
+const CardPokemon = ({ pokemon, index }) => {
+  console.log(pokemon);
+  const { name, sprites, id } = pokemon;
+
+  const { front_default } = sprites;
   return (
-    <Link to={"/home/" + index} className="card-pokemon-link">
-      <div className="card-pokemon">
-        <figure className="card-pokemon__img-container">
-          <img src={photo} alt={name} className="card-pokemon__img" />
-        </figure>
-        <article className="card-pokemon__text-container">
-          <span className="card-pokemon__name">{name}</span>
-          <span className="card-pokemon__details">Details</span>
-        </article>
-      </div>
-    </Link>
+    <>
+      {index <= 1 ? (
+        <Link to={"/home/" + index} className="card-pokemon-link">
+          <div className="card-pokemon">
+            <figure className="card-pokemon__img-container">
+              <img
+                src={front_default}
+                alt={name}
+                className="card-pokemon__img"
+              />
+            </figure>
+            <article className="card-pokemon__text-container">
+              <span className="card-pokemon__id">#{id}</span>
+              <span className="card-pokemon__name">{name}</span>
+              <span className="card-pokemon__details">Details</span>
+            </article>
+          </div>
+        </Link>
+      ) : (
+        <div className="card-pokemon">
+          <figure className="card-pokemon__img-container">
+            <img src={front_default} alt={name} className="card-pokemon__img" />
+          </figure>
+          <article className="card-pokemon__text-container">
+            <span className="card-pokemon__id">#{id}</span>
+            <span className="card-pokemon__name">{name}</span>
+          </article>
+        </div>
+      )}
+    </>
   );
 };
 
