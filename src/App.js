@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "src/pages/Home/Home";
+import Search from "./pages/Search/Search";
 import Header from "src/components/Header/Header";
 import PokemonDetail from "src/pages/PokemonDetail/PokemonDetail";
 
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path="/home/:index">
           <PokemonDetail />
+        </Route>
+        <Route path="/search">
+          <Search />
         </Route>
         <Route path="/">
           <Home />

@@ -11,6 +11,7 @@ const Header = () => {
       <Link to="/">
         <img src={PokemonLogo} className="header-logo" alt="pokemon" />
       </Link>
+      <Link to="/search">Search pokemons</Link>
     </header>
   );
 };
