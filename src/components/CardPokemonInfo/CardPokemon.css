@@ -1,0 +1,22 @@
+.card-pokemon-info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card-pokemon-info__details {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
+}
+
+@media (max-width: 768px) {
+  .card-pokemon-info__details {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}
