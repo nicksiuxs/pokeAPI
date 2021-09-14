@@ -10,4 +10,8 @@ For this app, I used React.Js
 
 ## Modules
 
-. React Router
+- React Router
+
+## Styles
+
+All the styles were made with css
