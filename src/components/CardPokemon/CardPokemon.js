@@ -6,14 +6,14 @@ import "./CardPokemon.css";
 
 const CardPokemon = ({ name, photo, index }) => {
   return (
-    <Link to={"/home/" + index}>
+    <Link to={"/home/" + index} className="card-pokemon-link">
       <div className="card-pokemon">
         <figure className="card-pokemon__img-container">
           <img src={photo} alt={name} className="card-pokemon__img" />
         </figure>
         <article className="card-pokemon__text-container">
           <span className="card-pokemon__name">{name}</span>
-          <span>Details</span>
+          <span className="card-pokemon__details">Details</span>
         </article>
       </div>
     </Link>
